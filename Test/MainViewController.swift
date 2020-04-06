@@ -12,7 +12,7 @@ class MainViewController: UIViewController, CreateAndWrite {
     var panGestureAnturePoint: CGPoint?
     var check: NSDictionary?
     var dataSource = [DataS()]
-    let text: NSDictionary = ["": [""]]
+    let text: NSDictionary = [:]
     
     
     override func viewDidLoad() {
