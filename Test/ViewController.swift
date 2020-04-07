@@ -45,13 +45,19 @@ class ViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first as? UITouch {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
+    }
+    
     func warningAlert(_ name: String) {
         let alert = UIAlertController(title: name, message: nil, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Хорошо", style: .cancel, handler: nil)
         
         alert.addAction(okAction)
-        sleep(1)
         present(alert, animated: true, completion: nil)
     }
 }
